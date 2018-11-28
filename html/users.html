@@ -1,0 +1,49 @@
+<form class="form-inline search">
+        <input type="text" class="form-control">
+        <button class="btn btn-info">搜索</button>
+      </form>
+
+      <table class="table table-bordered table-hover active">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>用户名</th>
+            <th>昵称</th>
+            <th>年龄</th>
+            <th>性别</th>
+            <th>是否管理员</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(var i=0; i<list.length;i++) {%>
+          <tr>
+            <th scope="row"><%= i+1 %></th>
+            <td><%= list[i].uname %></td>
+            <td><%= list[i].nickname %></td>
+            <td><%= list[i].age %></td>
+            <td><%= list[i].sex %></td>
+            <td><%= list[i].isAdmin %></td>
+          </tr>
+          <% }%>
+        </tbody>
+      </table>
+
+      <nav aria-label="Page navigation">
+        <ul class="pagination">
+          <li>
+            <a href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="active"><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li>
+            <a href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
